@@ -4,7 +4,7 @@ const DropArrows = ({length}) => {
     const createArray = () => {
         let results = [];
         for (let i = 0; i < length; i++) {
-            results.push("Drop")
+            results.push("D")
         }
         return results;
     }
@@ -12,9 +12,9 @@ const DropArrows = ({length}) => {
     const arrowRows = createArray();
     
     return(
-        <>
-        {arrowRows.map( drop => <button>drop</button>)}
-        </>
+        <div class="dropArrows" style={{width: "100%"}}>
+            {arrowRows.map( drop => <button>{drop}</button>)}
+        </div>
     )
 }
 

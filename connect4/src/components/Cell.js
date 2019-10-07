@@ -3,9 +3,9 @@ import React from "react";
 const Cell = ({cell}) => {
         
     return(
-        <>
-            <div>{cell}</div>
-        </>
+        <div class="cell">
+            <button>{cell}</button>
+        </div>
     )
 }
 
