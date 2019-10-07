@@ -1,4 +1,20 @@
 import React from "react";
+import styled from "styled-components";
+
+const Arrow = styled.i`
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+`
+
+const ArrowContainer = styled.div`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+`
 
 const DropArrows = ({length, dropPiece}) => {
     const createArray = () => {
@@ -12,9 +28,9 @@ const DropArrows = ({length, dropPiece}) => {
     const arrowRows = createArray();
     
     return(
-        <div class="dropArrows" style={{width: "100%"}}>
-            {arrowRows.map( (drop, i) => <button onClick={() => dropPiece(i)}>{drop}</button>)}
-        </div>
+        <ArrowContainer class="dropArrows" style={{width: "100%"}}>
+            {arrowRows.map( (drop, i) => <Arrow class="arrow down" onClick={() => dropPiece(i)}></Arrow>)}
+        </ArrowContainer>
     )
 }
 
