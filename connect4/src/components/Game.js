@@ -37,6 +37,7 @@ const Game = () => {
                 let row = board[i];
                 for (let j = 0; j < row.length-3; j++){
                     if (uniformRow(row[j], row[j+1], row[j+2], row[j+3])) {
+
                         setWinner(currentPlayer);
                     }
                 }
@@ -65,6 +66,37 @@ const Game = () => {
                     if (j >= (row.length-1)/2){
                         if (uniformRow(row[j], board[i+1][j-1], board[i+2][j-2], board[i+3][j-3])){
                             setWinner(currentPlayer);
+                        }
+
+                        alert("4 HORIZONTALLY");
+
+                    }
+                }
+            }
+
+            //vertically
+            for (let i = 0; i < board.length-3; i++) {
+                let row = board[i];
+                for (let j = 0; j < row.length; j++) {
+                    if (uniformRow(row[j], board[i+1][j], board[i+2][j], board[i+3][j])) {
+                        alert("4 Vertically");
+                    }
+                }
+            }
+
+            //diagonally
+            for (let i = 0; i < board.length-3; i++){
+                let row = board[i];
+                for (let j = 0; j < row.length; j++){
+                    if (j <= (row.length-1)/2) {
+                        if (uniformRow(row[j], board[i+1][j+1], board[i+2][j+2], board[i+3][j+3])) {
+                            alert("diagonal")
+                        }
+                    } 
+                    
+                    if (j >= (row.length-1)/2){
+                        if (uniformRow(row[j], board[i+1][j-1], board[i+2][j-2], board[i+3][j-3])){
+                            alert("diagonal")
                         }
                     }
                 }
