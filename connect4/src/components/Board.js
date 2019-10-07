@@ -2,11 +2,11 @@ import React from "react";
 import Row from "./Row";
 import DropArrows from "./DropArrows";
 
-const Board = ({board}) => {
+const Board = ({board, dropPiece}) => {
 
     return(
         <div class="board" style={{margin: "50px"}}>
-            <DropArrows length={board[0].length}/>
+            <DropArrows dropPiece={dropPiece} length={board[0].length}/>
             {board.map( row => <Row row={row} />)}
         </div>
     )

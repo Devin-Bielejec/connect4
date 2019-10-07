@@ -1,6 +1,6 @@
 import React from "react";
 
-const DropArrows = ({length}) => {
+const DropArrows = ({length, dropPiece}) => {
     const createArray = () => {
         let results = [];
         for (let i = 0; i < length; i++) {
@@ -13,7 +13,7 @@ const DropArrows = ({length}) => {
     
     return(
         <div class="dropArrows" style={{width: "100%"}}>
-            {arrowRows.map( drop => <button>{drop}</button>)}
+            {arrowRows.map( (drop, i) => <button onClick={() => dropPiece(i)}>{drop}</button>)}
         </div>
     )
 }

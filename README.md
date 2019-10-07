@@ -7,7 +7,7 @@ Making a react connect4
 [O,O,O,O,O,O,O]
 [O,O,O,O,O,O,O]
 [O,O,O,O,O,O,O]
-[R,Y,O,O,O,O,O]
+[O,Y,O,O,O,O,O]
 ]
 
 component: gameboard
